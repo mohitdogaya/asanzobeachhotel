@@ -992,6 +992,45 @@ button:focus-visible {
   color: #fff !important;
 }
 
+.contact-layout {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.contact-layout > *,
+.contact-details,
+.contact-map {
+  min-width: 0;
+}
+
+.contact-map {
+  width: 100%;
+}
+
+.contact-label {
+  margin: 2px 0 9px;
+  color: var(--palm);
+  font: 600 10px / 1.4 var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 1200px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 40px;
+  }
+}
+
 /* Card-based editorial footer composition */
 .footer-ref {
   min-height: 0;

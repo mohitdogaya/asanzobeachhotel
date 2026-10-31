@@ -992,6 +992,7 @@
   justify-self: end;
   display: inline-flex;
   align-items: center;
+  gap: 7px;
   gap: 9px;
   min-height: 42px;
   padding: 0 17px;
@@ -1129,15 +1130,13 @@
   isolation: isolate;
   display: inline-flex;
   align-items: center;
+  gap: 7px;
   width: max-content;
   max-width: 100%;
   padding: 5px 9px;
   border-radius: 999px;
   background: #f0eee9;
-  transition:
-    color 0.25s ease,
-    letter-spacing 0.25s ease,
-    transform 0.25s ease;
+  transition: none;
 }
 
 .eyebrow::before {
@@ -1167,30 +1166,12 @@
   clip-path: inset(0);
 }
 
-.eyebrow:hover {
-  letter-spacing: 0.24em;
-  color: #a84e36;
-  transform: translateY(-1px);
-}
-
-.eyebrow:hover .eyebrow-copy {
-  animation: eyebrow-text-reveal 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.eyebrow:hover::after {
-  transform: scaleX(1);
-}
-
-@keyframes eyebrow-text-reveal {
-  from {
-    clip-path: inset(0 100% 0 0);
-    transform: translateY(35%);
-  }
-
-  to {
-    clip-path: inset(0);
-    transform: translateY(0);
-  }
+.eyebrow-tree {
+  display: block;
+  width: 11px;
+  height: 13px;
+  flex: 0 0 auto;
+  fill: currentColor;
 }
 
 .hero .eyebrow {
@@ -1210,9 +1191,6 @@
     transition: none;
   }
 
-  .eyebrow:hover .eyebrow-copy {
-    animation: none;
-  }
 }
 
 @media (min-width: 801px) {

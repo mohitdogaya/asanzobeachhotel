@@ -8,6 +8,7 @@ import "./styles/theme.css";
 import "./styles/home-redesign.css";
 import "./styles/coastal-theme.css";
 import "./styles/brand-system.css";
+import "./styles/gallery.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

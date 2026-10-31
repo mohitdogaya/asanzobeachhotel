@@ -1,9 +1,8 @@
 import { Mail, MapPin, Phone, Waves } from "lucide-react";
 import { hotel } from "../data/hotelData";
 import { directionsUrl } from "../utils/constants";
-import Button from "../components/common/Button";
-import PageIntro from "../components/common/PageIntro";
 import Eyebrow from "../components/common/Eyebrow";
+import PageIntro from "../components/common/PageIntro";
 export default function Contact() {
   return (
     <>
@@ -25,7 +24,7 @@ export default function Contact() {
               <MapPin />
             </span>
             <div>
-              <Eyebrow>Visit</Eyebrow>
+              <h2 className="contact-label">Visit</h2>
               <p>{hotel.address}</p>
               <a
                 className="text-link"
@@ -42,7 +41,7 @@ export default function Contact() {
               <Phone />
             </span>
             <div>
-              <Eyebrow>Call reception</Eyebrow>
+              <h2 className="contact-label">Call reception</h2>
               <a href={`tel:${hotel.phoneLink}`}>{hotel.phone}</a>
             </div>
           </div>
@@ -51,7 +50,7 @@ export default function Contact() {
               <Mail />
             </span>
             <div>
-              <Eyebrow>Email</Eyebrow>
+              <h2 className="contact-label">Email</h2>
               <a href={`mailto:${hotel.email}`}>{hotel.email}</a>
             </div>
           </div>
