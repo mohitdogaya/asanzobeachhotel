@@ -1,2 +1,48 @@
-import { rooms } from '../data/roomsData'; import Button from '../components/common/Button'; import Reveal from '../components/common/Reveal'; import PageIntro from '../components/common/PageIntro'; import Eyebrow from '../components/common/Eyebrow';
-export default function Rooms(){return <><PageIntro number="02" title={<>Your own space<br/><em>to unwind.</em></>} intro="Choose from three room categories. Prices shown are informational and per night; please contact reception for enquiries."/><section className="rooms-list section-pad">{rooms.map((r,i)=><Reveal className={`room-row ${i%2?'reverse':''}`} key={r.name}><div className="room-row-img"><img src={r.image} alt={r.alt} loading="lazy"/><Eyebrow>ROOM 0{i+1}</Eyebrow></div><div className="room-row-copy"><Eyebrow>A comfortable stay</Eyebrow><h2>{r.name.split(' ').slice(0,-1).join(' ')}<br/><em>{r.name.split(' ').at(-1)}</em></h2><p className="price"><strong>{r.price}</strong> <span>THB / night</span></p><p>Illustrative room imagery. Contact the hotel to ask about this room and its verified details.</p><Button to="/contact">Enquire about this room</Button></div></Reveal>)}</section></>}
+import { rooms } from "../data/roomsData";
+import Button from "../components/common/Button";
+import Reveal from "../components/common/Reveal";
+import PageIntro from "../components/common/PageIntro";
+import Eyebrow from "../components/common/Eyebrow";
+export default function Rooms() {
+  return (
+    <>
+      <PageIntro
+        number="02"
+        title={
+          <>
+            Your own space
+            <br />
+            <em>to unwind.</em>
+          </>
+        }
+        intro="Choose from three room categories. Prices shown are informational and per night; please contact reception for enquiries."
+      />
+      <section className="rooms-list section-pad">
+        {rooms.map((r, i) => (
+          <Reveal className={`room-row ${i % 2 ? "reverse" : ""}`} key={r.name}>
+            <div className="room-row-img">
+              <img src={r.image} alt={r.alt} loading="lazy" />
+              <Eyebrow>ROOM 0{i + 1}</Eyebrow>
+            </div>
+            <div className="room-row-copy">
+              <Eyebrow>A comfortable stay</Eyebrow>
+              <h2>
+                {r.name.split(" ").slice(0, -1).join(" ")}
+                <br />
+                <em>{r.name.split(" ").at(-1)}</em>
+              </h2>
+              <p className="price">
+                <strong>{r.price}</strong> <span>THB / night</span>
+              </p>
+              <p>
+                Illustrative room imagery. Contact the hotel to ask about this
+                room and its verified details.
+              </p>
+              <Button to="/contact">Enquire about this room</Button>
+            </div>
+          </Reveal>
+        ))}
+      </section>
+    </>
+  );
+}

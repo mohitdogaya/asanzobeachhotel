@@ -1,32 +1,153 @@
 /* Preserve the Brisa-inspired hero and pill navigation while the lower sections use a more compact scale. */
-.header{height:88px}
-.nav-pill{min-height:64px;gap:30px;padding-left:19px}
-.nav-pill .brand img{width:105px;height:48px}
-.nav-pill .nav{gap:clamp(14px,2.4vw,35px)}
-.hero{height:min(800px,calc(100svh - 108px));min-height:560px}
-.hero-copy{bottom:88px;max-width:min(62vw,850px)}
-.hero-copy h1{font-size:clamp(58px,9.5vw,142px)}
-.hero-aside{bottom:94px;width:min(280px,25vw)}
-@media(max-width:800px){
-  .header{height:78px}
-  .nav-pill{min-height:59px;padding-left:14px;gap:12px}
-  .nav-pill .brand img{width:98px;height:44px}
-  .hero{height:calc(86svh - 78px);min-height:570px}
-  .hero-copy{left:7vw;bottom:145px;max-width:84vw}
-  .hero-copy h1{font-size:clamp(58px,12vw,94px)}
-  .hero-aside{left:7vw;right:auto;bottom:72px;width:min(330px,75vw)}
+.header {
+  height: 88px;
 }
-@media(max-width:520px){
-  .header{height:72px}
-  .nav-pill{min-height:56px}
-  .nav-pill .brand img{width:92px;height:42px}
-  .hero{height:calc(84svh - 72px);min-height:565px}
-  .hero-copy{bottom:165px;left:6vw;max-width:90vw}
-  .hero-copy h1{font-size:clamp(52px,13vw,69px);line-height:.94}
-  .hero-aside{left:6vw;bottom:72px;width:84vw}
+
+.nav-pill {
+  min-height: 64px;
+  gap: 30px;
+  padding-left: 19px;
 }
-.header-home{position:sticky;top:10px;z-index:40;margin-bottom:-88px;background:transparent}
-.header-home .nav-pill{box-shadow:0 8px 30px #17201d12}
-.hero{height:100svh;min-height:600px}
-@media(max-width:800px){.header-home{margin-bottom:-78px}.hero{height:100svh;min-height:580px}}
-@media(max-width:520px){.header-home{margin-bottom:-72px}.hero{height:100svh;min-height:560px}}
+
+.nav-pill .brand img {
+  width: 105px;
+  height: 48px;
+}
+
+.nav-pill .nav {
+  gap: clamp(14px, 2.4vw, 35px);
+}
+
+.hero {
+  height: min(800px, calc(100svh - 108px));
+  min-height: 560px;
+}
+
+.hero-copy {
+  bottom: 88px;
+  max-width: min(62vw, 850px);
+}
+
+.hero-copy h1 {
+  font-size: clamp(58px, 9.5vw, 142px);
+}
+
+.hero-aside {
+  bottom: 94px;
+  width: min(280px, 25vw);
+}
+
+@media (max-width: 800px) {
+  .header {
+    height: 78px;
+  }
+
+  .nav-pill {
+    min-height: 59px;
+    padding-left: 14px;
+    gap: 12px;
+  }
+
+  .nav-pill .brand img {
+    width: 98px;
+    height: 44px;
+  }
+
+  .hero {
+    height: calc(86svh - 78px);
+    min-height: 570px;
+  }
+
+  .hero-copy {
+    left: 7vw;
+    bottom: 145px;
+    max-width: 84vw;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(58px, 12vw, 94px);
+  }
+
+  .hero-aside {
+    left: 7vw;
+    right: auto;
+    bottom: 72px;
+    width: min(330px, 75vw);
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    height: 72px;
+  }
+
+  .nav-pill {
+    min-height: 56px;
+  }
+
+  .nav-pill .brand img {
+    width: 92px;
+    height: 42px;
+  }
+
+  .hero {
+    height: calc(84svh - 72px);
+    min-height: 565px;
+  }
+
+  .hero-copy {
+    bottom: 165px;
+    left: 6vw;
+    max-width: 90vw;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(52px, 13vw, 69px);
+    line-height: 0.94;
+  }
+
+  .hero-aside {
+    left: 6vw;
+    bottom: 72px;
+    width: 84vw;
+  }
+}
+
+.header-home {
+  position: sticky;
+  top: 10px;
+  z-index: 40;
+  margin-bottom: -88px;
+  background: transparent;
+}
+
+.header-home .nav-pill {
+  box-shadow: 0 8px 30px #17201d12;
+}
+
+.hero {
+  height: 100svh;
+  min-height: 600px;
+}
+
+@media (max-width: 800px) {
+  .header-home {
+    margin-bottom: -78px;
+  }
+
+  .hero {
+    height: 100svh;
+    min-height: 580px;
+  }
+}
+
+@media (max-width: 520px) {
+  .header-home {
+    margin-bottom: -72px;
+  }
+
+  .hero {
+    height: 100svh;
+    min-height: 560px;
+  }
+}
