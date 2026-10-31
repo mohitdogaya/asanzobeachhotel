@@ -35,7 +35,7 @@ export default function Amenities() {
         }
         intro="Explore the facilities and services listed for Asanzo Beach Hotel."
       />
-      <section className="amenities-list section-pad">
+      <section className="amenities-list amenities-directory section-pad">
         {amenityGroups.map((group, i) => {
           const Icon = icons[group.icon];
           return (

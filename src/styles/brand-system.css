@@ -219,6 +219,37 @@ textarea,
 .about-quote em {
   color: var(--palm);
 }
+.contact-cta-modern {
+  background: var(--ocean);
+  color: var(--pearl);
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+.contact-cta-modern h2 {
+  color: var(--pearl);
+}
+.contact-cta-modern h2 em {
+  color: var(--sand);
+}
+.contact-cta-modern p {
+  color: #e4dccf;
+}
+.contact-cta-modern .cta-phone {
+  color: var(--pearl);
+}
+.contact-cta-modern .cta-address {
+  color: #d8cbb7;
+}
+@media (max-width: 800px) {
+  .contact-cta-modern {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 520px) {
+  .contact-cta-modern {
+    margin-bottom: 24px;
+  }
+}
 .footer,
 .footer-ref {
   background: var(--ocean);
@@ -1052,15 +1083,41 @@ button:focus-visible {
   align-items: flex-start;
   padding: 0 0 18px;
 }
+.footer-ref-logo-mark {
+  width: 113px;
+  height: 78px;
+  flex: 0 0 113px;
+  overflow: hidden;
+}
+.footer-ref-logo-mark img {
+  display: block;
+  width: 113px;
+  height: 113px;
+  object-fit: contain;
+  object-position: center top;
+}
+.footer-ref-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 100%;
+  margin-bottom: 9px;
+}
+.footer-ref-brand-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  min-width: 0;
+}
 .footer-ref-intro .footer-ref-name {
   color: var(--pearl);
-  font: 600 clamp(42px, 4.2vw, 62px) / 0.95 var(--serif);
+  font: 600 clamp(36px, 3.8vw, 50px) / 0.95 var(--serif);
   letter-spacing: -0.045em;
 }
-.footer-ref-intro > span {
-  margin-top: 6px;
+.footer-ref-brand-name > span {
   color: var(--warm-sand);
-  font-size: 14px;
+  font-size: 13px;
 }
 .footer-ref-intro p {
   max-width: 350px;
@@ -1174,6 +1231,25 @@ button:focus-visible {
   .footer-ref-card {
     min-height: 175px;
     padding: 19px;
+  }
+  .footer-ref-logo-mark {
+    width: 91px;
+    height: 63px;
+    flex-basis: 91px;
+  }
+  .footer-ref-logo-mark img {
+    width: 91px;
+    height: 91px;
+  }
+  .footer-ref-brand-lockup {
+    gap: 10px;
+    padding-left: 0;
+  }
+  .footer-ref-intro .footer-ref-name {
+    font-size: clamp(34px, 10vw, 38px);
+  }
+  .footer-ref-brand-name > span {
+    font-size: 12px;
   }
   .footer-ref-signature {
     margin-top: 44px;

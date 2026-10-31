@@ -13,10 +13,17 @@ export default function Footer() {
     <footer className="footer footer-ref">
       <div className="footer-ref-layout">
         <div className="footer-ref-intro">
-          <Link to="/" className="footer-ref-name">
-            Asanzo
-          </Link>
-          <span>Beach Hotel</span>
+          <div className="footer-ref-brand-lockup">
+            <div className="footer-ref-logo-mark" aria-hidden="true">
+              <img src="/images/asanzo-logo.webp" alt="" />
+            </div>
+            <div className="footer-ref-brand-name">
+              <Link to="/" className="footer-ref-name">
+                Asanzo
+              </Link>
+              <span>Beach Hotel</span>
+            </div>
+          </div>
           <p>
             A considered Pattaya stay with space to settle in and slow down.
           </p>
